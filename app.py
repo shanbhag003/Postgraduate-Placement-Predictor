@@ -89,5 +89,9 @@ app.add_url_rule('/tool', 'webio_view', webio_view(predict), methods = ['GET', '
 #if __name__ = '__main__':
     #predict()
 
+if __name__ == "__main__":
+    app.run(debug=True)
+    app.run()
+    
 #app.run(host = 'Localhost', port = 80)
 
