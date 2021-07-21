@@ -15,6 +15,7 @@ import numpy as np
 import sklearn
 from pywebio.platform.flask import webio_view
 from pywebio import STATIC_PATH
+from pywebio import start_server
 
 model = pickle.load(open('knn_model.pkl','rb'))
 app = Flask(__name__)
