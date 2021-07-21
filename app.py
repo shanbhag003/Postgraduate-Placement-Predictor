@@ -31,19 +31,19 @@ def predict():
     
     etest_p = input("Enter your Aptitude Score (Out of 100): ", type = NUMBER)
     
-    gender_M = input("Enter Gender: ", ['M', 'F'])
+    gender_M = select("Enter Gender: ", ['M', 'F'])
     if (gender_M == 'M'):
         gender_M = 1
     else:
         gender_M = 0
         
-    hsc_b_Others = input("Enter HSC Board of Education: ", ['Others', 'Central'])
+    hsc_b_Others = select("Enter HSC Board of Education: ", ['Others', 'Central'])
     if (hsc_b_Others == 'Others'):
         hsc_b_Others = 1
     else:
         hsc_b_Others = 0
     
-    hsc_s_Commerce = input("Enter HSC Specialization: ", ['Commerce', 'Science', 'Arts'])
+    hsc_s_Commerce = select("Enter HSC Specialization: ", ['Commerce', 'Science', 'Arts'])
     if (hsc_s_Commerce == 'Commerce'):
         hsc_s_Commerce = 1
         hsc_s_Science = 0
@@ -54,7 +54,7 @@ def predict():
         hsc_s_Commerce = 0
         hsc_s_Science = 0
     
-    degree_t_Others = input("Enter Graduation Specialization: ", ['Sci_Tech', 'Comm_Mgmt', 'Others'])
+    degree_t_Others = select("Enter Graduation Specialization: ", ['Sci_Tech', 'Comm_Mgmt', 'Others'])
     if (degree_t_Others == 'Others'):
         degree_t_Others = 1
         degree_t_Sci_Tech = 0
@@ -65,13 +65,13 @@ def predict():
         degree_t_Others = 0
         degree_t_Sci_Tech = 0
     
-    workex_Yes = input("Do you have work experience? ", ['Yes', 'No'])
+    workex_Yes = select("Do you have work experience? ", ['Yes', 'No'])
     if (workex_Yes == 'Yes'):
         workex_Yes = 1
     else:
         workex_Yes = 0
     
-    specialisation_Mkt_HR = input("Enter Post Graduation Specialization: ", ['Mkt_HR', 'Mkt_Fin'])
+    specialisation_Mkt_HR = select("Enter Post Graduation Specialization: ", ['Mkt_HR', 'Mkt_Fin'])
     if (specialisation_Mkt_HR == 'Mkt&HR'):
         specialisation_Mkt_HR = 1
     else:
