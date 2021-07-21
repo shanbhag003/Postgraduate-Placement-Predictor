@@ -21,15 +21,15 @@ model = pickle.load(open('knn_model.pkl','rb'))
 app = Flask(__name__)
 
 def predict():
-    ssc_p = input("Enter your SSC Percentage: ", type = float)
+    ssc_p = input("Enter your SSC Percentage: ", type = FLOAT)
     
-    hsc_p = input("Enter your HSC Percentage: ", type = float)
+    hsc_p = input("Enter your HSC Percentage: ", type = FLOAT)
     
-    degree_p = input("Enter your Graduation Percentage: ", type = float)
+    degree_p = input("Enter your Graduation Percentage: ", type = FLOAT)
     
-    mba_p = input("Enter your MBA Percentage: ", type = float)
+    mba_p = input("Enter your MBA Percentage: ", type = FLOAT)
     
-    etest_p = input("Enter your Aptitude Score (Out of 100): ", type = int)
+    etest_p = input("Enter your Aptitude Score (Out of 100): ", type = NUMBER)
     
     gender_M = input("Enter Gender: ", ['M', 'F'])
     if (gender_M == 'M'):
