@@ -21,15 +21,6 @@ model = pickle.load(open('knn_model.pkl','rb'))
 app = Flask(__name__)
 
 def predict():
-    ssc_p = input("Enter your SSC Percentage: ", type = FLOAT)
-    
-    hsc_p = input("Enter your HSC Percentage: ", type = FLOAT)
-    
-    degree_p = input("Enter your Graduation Percentage: ", type = FLOAT)
-    
-    mba_p = input("Enter your MBA Percentage: ", type = FLOAT)
-    
-    etest_p = input("Enter your Aptitude Score (Out of 100): ", type = NUMBER)
     
     gender_M = select("Enter Gender: ", ['M', 'F'])
     if (gender_M == 'M'):
@@ -37,6 +28,8 @@ def predict():
     else:
         gender_M = 0
         
+    ssc_p = input("Enter your SSC Percentage: ", type = FLOAT)
+    
     hsc_b_Others = select("Enter HSC Board of Education: ", ['Others', 'Central'])
     if (hsc_b_Others == 'Others'):
         hsc_b_Others = 1
@@ -54,6 +47,8 @@ def predict():
         hsc_s_Commerce = 0
         hsc_s_Science = 0
     
+    hsc_p = input("Enter your HSC Percentage: ", type = FLOAT)
+    
     degree_t_Others = select("Enter Graduation Specialization: ", ['Sci_Tech', 'Comm_Mgmt', 'Others'])
     if (degree_t_Others == 'Others'):
         degree_t_Others = 1
@@ -65,17 +60,25 @@ def predict():
         degree_t_Others = 0
         degree_t_Sci_Tech = 0
     
-    workex_Yes = select("Do you have work experience? ", ['Yes', 'No'])
-    if (workex_Yes == 'Yes'):
-        workex_Yes = 1
-    else:
-        workex_Yes = 0
+    degree_p = input("Enter your Graduation Percentage: ", type = FLOAT)
     
     specialisation_Mkt_HR = select("Enter Post Graduation Specialization: ", ['Mkt_HR', 'Mkt_Fin'])
     if (specialisation_Mkt_HR == 'Mkt&HR'):
         specialisation_Mkt_HR = 1
     else:
         specialisation_Mkt_HR = 0
+    
+    mba_p = input("Enter your MBA Percentage: ", type = FLOAT)
+    
+    etest_p = input("Enter your Aptitude Score (Out of 100): ", type = NUMBER)
+    
+    workex_Yes = select("Do you have work experience? ", ['Yes', 'No'])
+    if (workex_Yes == 'Yes'):
+        workex_Yes = 1
+    else:
+        workex_Yes = 0
+    
+    
     
     prediction = model.predict([[ssc_p, hsc_p, degree_p, mba_p, etest_p, gender_M, hsc_b_Others, hsc_s_Commerce, hsc_s_Science,
                                  degree_t_Others, degree_t_Sci_Tech, workex_Yes, specialisation_Mkt_HR]])
