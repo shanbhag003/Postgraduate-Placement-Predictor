@@ -77,8 +77,8 @@ def predict():
     else:
         specialisation_Mkt_HR = 0
     
-    prediction = model.predict([[ssc_p, hsc_p, degree_p, mba_p, etest_p, gender_M, hsc_b_Others, hsc_s_Commerce,
-                                degree_t_Others, workex_Yes, specialisation_Mkt_HR]])
+    prediction = model.predict([[ssc_p, hsc_p, degree_p, mba_p, etest_p, gender_M, hsc_b_Others, hsc_s_Commerce, hsc_s_Science,
+                                 degree_t_Others, degree_t_Sci_Tech, workex_Yes, specialisation_Mkt_HR]])
     output = prediction
     
     if output == 0:
