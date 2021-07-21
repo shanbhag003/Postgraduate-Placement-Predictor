@@ -85,7 +85,7 @@ def predict():
     output = prediction
     
     if output == 0:
-        put_text("Chances of getting placed are quite low. You need to work hard on developing your skills.")
+        put_text("Your chances of getting placed are quite low. Try working on developing your skills.")
     else:
         put_text("You are more likely to get placed.")
 
