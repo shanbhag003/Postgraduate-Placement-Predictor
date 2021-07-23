@@ -6,6 +6,6 @@ For this purpose I  applied various classification algorithms but, finally used 
 
 All the files required for deployment are attached to this repo. Tools and app which I have used are:
 
-1) Python (PlacementPredictor) -> Model Building
-2) Pywebio & Flask (app.py)-> Web Framework 
-3) Heroku (Procfile & requirements.txt) -> Model Deployment
+		1) Python (PlacementPredictor) -> Model Building
+		2) Pywebio & Flask (app.py)-> Web Framework 
+		3) Heroku (Procfile & requirements.txt) -> Model Deployment
