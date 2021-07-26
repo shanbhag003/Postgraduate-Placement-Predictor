@@ -21,12 +21,6 @@ model = pickle.load(open('knn_model.pkl','rb'))
 app = Flask(__name__)
 
 def predict():
-    
-    gender_M = select("Enter Gender: ", ['M', 'F'])
-    if (gender_M == 'M'):
-        gender_M = 1
-    else:
-        gender_M = 0
         
     ssc_p = input("Enter your SSC Percentage: ", type = FLOAT)
     
@@ -80,7 +74,7 @@ def predict():
     
     
     
-    prediction = model.predict([[ssc_p, hsc_p, degree_p, mba_p, etest_p, gender_M, hsc_b_Others, hsc_s_Commerce, hsc_s_Science,
+    prediction = model.predict([[ssc_p, hsc_p, degree_p, mba_p, etest_p, hsc_b_Others, hsc_s_Commerce, hsc_s_Science,
                                  degree_t_Others, degree_t_Sci_Tech, workex_Yes, specialisation_Mkt_HR]])
     output = prediction
     
